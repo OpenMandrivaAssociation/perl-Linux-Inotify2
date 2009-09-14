@@ -2,7 +2,7 @@
 %define module	Linux-Inotify2
 %define name	perl-%{module}
 %define version	1.2
-%define rel	1
+%define rel	2
 
 Summary:	Scalable directory/file change notification
 Name:		%{name}
