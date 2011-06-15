@@ -1,9 +1,9 @@
 %define upstream_name	 Linux-Inotify2
-%define upstream_version 1.21
+%define upstream_version 1.22
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 3
+Release:    %mkrel 1
 
 Summary:	Scalable directory/file change notification
 License:	GPL+ or Artistic
