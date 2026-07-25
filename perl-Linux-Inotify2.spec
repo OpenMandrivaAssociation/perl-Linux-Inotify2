@@ -1,15 +1,15 @@
 %define upstream_name	 Linux-Inotify2
-%define upstream_version 1.22
+%define upstream_version 2.3
 
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:	4
+Version:    %{upstream_version}
+Release:	1
 
 Summary:	Scalable directory/file change notification
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Linux/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://metacpan.org/dist/Linux-Inotify2
+Source0:	https://cpan.metacpan.org/authors/id/M/ML/MLEHMANN/Linux-Inotify2-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
