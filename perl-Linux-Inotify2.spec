@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %{upstream_version}
-Release:	1
+Release:	2
 
 Summary:	Scalable directory/file change notification
 License:	GPL+ or Artistic
@@ -14,7 +14,6 @@ Source0:	https://cpan.metacpan.org/authors/id/M/ML/MLEHMANN/Linux-Inotify2-2.3.t
 BuildRequires:	make
 BuildRequires:	perl-devel
 Requires:	perl(common::sense)
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This module implements an interface to the Linux 2.6.13 and later
@@ -24,15 +23,13 @@ Inotify file/directory change notification sytem.
 %setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
-%{__perl} Makefile.PL INSTALLDIRS=vendor
+perl Makefile.PL INSTALLDIRS=vendor
 %make
 
 %install
 rm -rf %{buildroot}
 %makeinstall_std
 
-%clean
-rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
