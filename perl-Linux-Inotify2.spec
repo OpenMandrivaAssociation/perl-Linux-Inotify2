@@ -2,8 +2,8 @@
 %define upstream_version 2.3
 
 Name:       perl-%{upstream_name}
-Version:    %{upstream_version}
-Release:	2
+Version:    2.3
+Release:	1
 
 Summary:	Scalable directory/file change notification
 License:	GPL+ or Artistic
@@ -20,7 +20,7 @@ This module implements an interface to the Linux 2.6.13 and later
 Inotify file/directory change notification sytem.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n Linux-Inotify2-2.3
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -30,6 +30,9 @@ perl Makefile.PL INSTALLDIRS=vendor
 rm -rf %{buildroot}
 %makeinstall_std
 
+
+%check
+make test || :
 
 %files
 %defattr(-,root,root)
